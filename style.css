@@ -1,0 +1,425 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Dosis', sans-serif;
+}
+
+/*Navigation*/
+/*Top nav*/
+ul{
+    float: right;
+    margin-right: 4%;
+    line-height: 60px;
+}
+
+li{
+    display: inline-block;
+}
+
+.get-started{
+    margin-left: 75px;
+}
+
+.nav-list{
+    margin-right: 15px;
+}
+
+.top-nav-link{
+    padding: 10px 15px;
+    border-radius: 10px;
+    color: #27515F;
+}
+
+.top-nav-link:hover{
+    background-color: #5BB8B8;
+    color: white;
+}
+
+.get-started-link{
+    padding: 10px 22px;
+    border-radius: 10px;
+    color: white;
+    background-color: #5BB0B8;
+}
+
+/*Hamburger icon*/
+.checkbtn{
+    font-size: 35px;
+    float: right;
+    cursor: pointer;
+    display: none;
+    margin-right: 10px;
+}
+
+#check{
+    display: none;
+}
+
+/*Navbar responsiveness*/
+@media(max-width:600px){
+    .top-nav-link, .get-started-link{
+        font-size: 20px;
+        padding: 10px 5px;
+        color: white;
+    }
+
+    .checkbtn{
+        display: block;
+    }
+
+    ul{
+        position: absolute;
+        width: 87%;
+        height: 90%;
+        background-color: #00131F;
+        top: 1px;
+        left: -100%;
+        transition: all 5.s;
+        text-align: center;
+        z-index: 1;
+    }
+
+    main{
+        position: fixed;
+    }
+
+    li{
+        display: block;
+        padding: 0;
+        line-height: 100px;
+    }
+
+    .top-nav-link:hover, .get-started-link:active{
+        background: none;
+        color: #5BB8B8;
+    }
+
+    .get-started-link{
+        padding: 10px 15px;
+        margin-left: 0;
+        margin-right: 93px;
+    }
+
+    #check:checked ~ ul{
+        left: 0;
+    }
+
+}
+
+
+/*Side nav*/
+.side-nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70px;
+    min-height: 130%;
+    max-height: 300%;
+    background-color: #27515F;
+    background-size: cover;
+    background-repeat: repeat;
+    position: absolute;
+}
+
+
+.logo{
+    align-self: center;
+    color: white;
+    align-items: flex-start;
+    margin-bottom: 50%;
+    margin-top: 40%;
+}
+
+.home-icon{
+    align-self: center;
+}
+
+.dashboard-icon{
+    align-self: center;
+    margin-top: 13px;
+}
+
+.copy-icon{
+    align-self: center;
+    margin-top: 13px;
+}
+
+.archive-icon{
+    align-self: center;
+    margin-top: 14px;
+}
+
+.profile-icon{
+    align-self: center;
+    margin-top: 13px;
+}
+
+.settings-icon{
+    align-self: center;
+    margin-top: 13px;
+}
+
+.help-icon{
+    align-self: center;
+    margin-top: 13px;
+    margin-bottom: 150px;
+}
+
+.arrow-icon{
+    margin-top: 80%;
+    align-self: center;
+    
+}
+
+/*Body*/
+main{
+    position: absolute;
+    width: 85%;
+    margin-left: 140px;
+    margin-top: 100px;
+    padding-bottom: 30px;
+}
+
+h3{
+    color: #27515F;
+}
+
+.input1, .input3, .input5{
+    width: 87%;
+    height: 35px;
+    background-color: #F4F5F5;
+    border: solid #F4F5F5;
+    border-radius: 6px;
+    outline: none;
+    padding-left: 8px;
+    color: #27515F;
+}
+
+.shorten-button, .get-a-link-button, .url-extract-button{
+    margin-left: 18px;
+    width: 100px;
+    height: 38px;
+    background-color: #27515F;
+    color: white;
+    border: solid #27515F;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover{
+    opacity: 0.7;
+}
+
+.input2, .input4{
+    width: 76%;
+    height: 35px;
+    background-color: #F4F5F5;
+    border: solid #F4F5F5;
+    border-radius: 6px;
+    outline: none;
+    padding-left: 8px;
+    color: #27515F;
+}
+
+.copy-button, .copy-button2{
+    margin-left: 18px;
+    width: 100px;
+    height: 38px;
+    background-color: #27515F;
+    color: white;
+    border: solid #27515F;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.customize-button, .customize-button2{
+    margin-left: 18px;
+    width: 100px;
+    height: 38px;
+    background-color: #5BB8B8;
+    color: white;
+    border: solid #5BB8B8;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#inputt1::placeholder, #inputt3::placeholder, #inputt5::placeholder{
+    color:#27515F;
+    text-transform: lowercase;
+}
+
+#inputt2::placeholder, #inputt4::placeholder{
+    color: #2ed1d1;
+    font-weight: 550;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+
+fontAwesome{
+    color: #2ed1d1;
+}
+
+
+/*Mobile responsiveness*/
+@media(max-width:1440px){
+    .help-icon{
+        margin-bottom: 170px;
+    }
+
+    .input2, .input4{
+        width: 76.5%;
+    }
+
+}
+
+@media(max-width:1335px){
+    main{
+        width: 80%;
+    }
+
+    .input2, .input4{
+        width: 75.5%;
+    }
+}
+
+@media(max-width:1200px){
+    .input1, .input3, .input5{
+        width: 85%;
+    }
+
+    .input2, .input4{
+        width: 72%;
+    }
+
+    .logo{
+        margin-top: 20%;
+        padding-top: 25%;
+    }
+
+    main{
+        margin-top: 80px;
+    }
+
+    .help-icon{
+        margin-bottom: 100px;
+    }
+
+}
+
+@media(max-width:1224px){
+    .input1, .input3, .input5{
+        width: 82.5%;
+    }
+
+    .input2, .input4{
+        width: 68%;
+    }
+
+    main{
+        margin-top: 70px;
+    }
+}
+
+@media(max-width:800px){
+    .input1, .input3, .input5{
+        width: 75.5%;
+    }
+
+    .input2, .input4{
+        width: 56%;
+    }
+
+    .logo{
+        padding-top: 23%;
+    }
+
+    .help-icon{
+        margin-bottom: 110px;
+    }
+
+    main{
+        margin-left: 120px;
+    }
+}
+
+@media(max-width:460px){
+    main{
+        margin-left: 90px;
+        margin-top: 60px;
+        width: 70%;
+        padding-bottom: 50px;
+    }
+
+    .side-nav{
+        width: 60px;
+        height: 170%;
+    }
+
+    .input1, .input3, .input5{
+        width: 97%;
+    }
+
+    .input2, .input4{
+        width: 97%;
+    }
+
+    .logo{
+        padding-top: 15%;
+    }
+
+    .help-icon{
+        margin-bottom: 300px;
+    }
+
+    .arrow-icon{
+        margin-top: 30%;
+    }
+
+    .copy-button, .copy-button2{
+        margin-top: 15px;
+    }
+
+    .customize-button, .customize-button2{
+        margin-top: 15px;
+    }
+
+    .shorten-button, .get-a-link-button, .url-extract-button{
+        margin-top: 15px;
+    }
+}
+
+@media(max-width:325px){
+    main{
+        margin-left: 75px;
+    }
+
+    .side-nav{
+        height: 180vh;
+    }
+    
+    .logo{
+        padding-top: 10%;
+    }
+
+    .arrow-icon{
+        margin-top: 50%;
+    }
+
+    .help-icon{
+        margin-bottom: 450px;
+    }
+
+    .get-started-link{
+        padding: 10px 10px;
+        margin-left: 0;
+        margin-right: 93px;
+    }
+}   
+
+
+
+
+
